@@ -23,7 +23,7 @@ Prepare the CentOs platforms
       "centos ALL=(ALL)       NOPASSWD: ALL"
       
 
-* You must have created a ssh key and use ssh-copy-id locally on the IP of the device (not localhost)\
+* You must have created a ssh key and use ssh-copy-id locally on the IP of the device (not localhost). Check local authorized_keys file.
 
       ssh-keygen
       ssh-copy-id centos@hostIP
@@ -52,7 +52,7 @@ then:
 If you use vanilla CentOS, you need to:
 
     sudo yum install libvirt -y
-    sudo yum install quemu-kvm -y
+    sudo yum install qemu-kvm -y
     sudo usermod -a -G libvirt $(whoami)
     newgrp libvirt
 
@@ -232,3 +232,21 @@ Update those values accordingly to your infrastructure
     curl -X PUT -d username:password tenanta/ADC-Services/cluster-nicolas/cluster_credentials
     
     
+ AWS: check the following Inbound rules (Centos servers):
+ 
+      Custom TCP Rule   TCP         1022        selected_subnet
+      HTTP              TCP         80          selected_subnet
+      Custom TCP Rule   TCP         11000       selected_subnet
+      Custom TCP Rule   TCP         1080        selected_subnet
+      Custom TCP Rule   TCP         1180        selected_subnet
+      Custom UDP Rule   UDP         8301 - 8302 selected_subnet
+      Custom UDP Rule   UDP         8600        selected_subnet
+      Custom TCP Rule   TCP         8443        selected_subnet
+      Custom TCP Rule   TCP         8443        172.18.0.0/16
+      Custom TCP Rule   TCP         51574       selected_subnet
+      Custom TCP Rule   TCP         11443       selected_subnet
+      Custom TCP Rule   TCP         8301        selected_subnet
+      Custom TCP Rule   TCP         8400        selected_subnet
+      Custom TCP Rule   TCP         10443       selected_subnet
+      Custom TCP Rule   TCP         8302        selected_subnet
+      Custom TCP Rule   TCP         8500        selected_subnet

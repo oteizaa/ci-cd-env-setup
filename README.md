@@ -250,3 +250,9 @@ Update those values accordingly to your infrastructure
       Custom TCP Rule   TCP         10443       selected_subnet
       Custom TCP Rule   TCP         8302        selected_subnet
       Custom TCP Rule   TCP         8500        selected_subnet
+
+
+Install NGINX Controller: https://docs.nginx.com/nginx-controller/admin-guide/installing-nginx-controller/
+
+Admin email	student@f5.com
+Admin password	Pa55w0rd!123

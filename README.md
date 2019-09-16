@@ -254,5 +254,8 @@ Update those values accordingly to your infrastructure
 
 Install NGINX Controller: https://docs.nginx.com/nginx-controller/admin-guide/installing-nginx-controller/
 
-Admin email	student@f5.com
-Admin password	Pa55w0rd!123
+Admin email:	student@f5.com
+Admin password:	Pa55w0rd!123
+
+Note: in the /etc/postgresql/9.5/main/pg_hba.conf file, add the following line:
+host    all             all             172.0.0.0/8             trust

@@ -259,3 +259,5 @@ Admin password:	Pa55w0rd!123
 
 Note: in the /etc/postgresql/9.5/main/pg_hba.conf file, add the following line:
 host    all             all             172.0.0.0/8             trust
+
+In Minishift, to execute oc commands, run: minishift oc-env

@@ -267,7 +267,9 @@ In Minishift, to execute oc commands, run: minishift oc-env
 
 
       docker tag nginxplus $(minishift openshift registry)/default/nginxplus:default
+      #docker tag nginxplus 172.30.1.1:5000/default/nginxplus:default
 
       docker push $(minishift openshift registry)/default/nginxplus:default
+      #docker push 172.30.1.1:5000/default/nginxplus:default
 
 
